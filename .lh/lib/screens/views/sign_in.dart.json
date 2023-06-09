@@ -1,0 +1,114 @@
+{
+    "sourceFile": "lib/screens/views/sign_in.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1686204469218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686205219611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-import 'package:flutter/src/widgets/framework.dart';\n-import 'package:flutter/src/widgets/placeholder.dart';\n+import 'package:uniccon/export.dart';\n \n class SignIn extends StatefulWidget {\n   const SignIn({super.key});\n \n"
+                },
+                {
+                    "date": 1686209246980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/utils/colors.dart';\n \n class SignIn extends StatefulWidget {\n   const SignIn({super.key});\n \n@@ -9,7 +10,9 @@\n \n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n-    return const Placeholder();\n+    return const Placeholder(\n+      color: AppColors.checkBox,\n+    );\n   }\n }\n"
+                },
+                {
+                    "date": 1686209277718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n-    return const Placeholder(\n-      color: AppColors.checkBox,\n+    return Container(\n+      color: AppColors.card,\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686209338467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n     return Container(\n-      color: AppColors.card,\n+      color: AppColors.background,\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686209416429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n \n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n-    return Container(\n-      color: AppColors.background,\n+    return Scaffold(\n+      body: Container(\n+        color: AppColors.background,\n+      ),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686209434186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,9 @@\n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n-      body: Container(\n-        color: AppColors.background,\n-      ),\n+      backgroundColor: AppColors.background,\n+      body: Container(),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686209489199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n-      backgroundColor: AppColors.background,\n-      body: Container(),\n-    );\n+        backgroundColor: AppColors.background,\n+        body: Column(\n+          children: const [Icon(Icons.arrow_back_ios)],\n+        ));\n   }\n }\n"
+                },
+                {
+                    "date": 1686209536835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,12 @@\n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n         backgroundColor: AppColors.background,\n-        body: Column(\n-          children: const [Icon(Icons.arrow_back_ios)],\n+        body: Padding(\n+          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n+          child: Column(\n+            children: const [Icon(Icons.arrow_back_ios)],\n+          ),\n         ));\n   }\n }\n"
+                },
+                {
+                    "date": 1686209542075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         backgroundColor: AppColors.background,\n         body: Padding(\n           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n           child: Column(\n-            children: const [Icon(Icons.arrow_back_ios)],\n+            children: const [Icon(Icons.arrow_back)],\n           ),\n         ));\n   }\n }\n"
+                },
+                {
+                    "date": 1686209571601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,12 @@\n         backgroundColor: AppColors.background,\n         body: Padding(\n           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n           child: Column(\n-            children: const [Icon(Icons.arrow_back)],\n+            children: const [\n+              Icon(Icons.arrow_back),\n+              addVerticalSpace,\n+            ],\n           ),\n         ));\n   }\n }\n"
+                },
+                {
+                    "date": 1686209631722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/colors.dart';\n+import 'package:uniccon/utils/helper_widgets.dart';\n \n class SignIn extends StatefulWidget {\n   const SignIn({super.key});\n \n@@ -17,9 +18,9 @@\n           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n           child: Column(\n             children: const [\n               Icon(Icons.arrow_back),\n-              addVerticalSpace,\n+              addVerticalSpace(30),\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686209644471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n         backgroundColor: AppColors.background,\n         body: Padding(\n           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n           child: Column(\n-            children: const [\n-              Icon(Icons.arrow_back),\n+            children: [\n+              const Icon(Icons.arrow_back),\n               addVerticalSpace(30),\n             ],\n           ),\n         ));\n"
+                },
+                {
+                    "date": 1686209711779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import 'package:uniccon/export.dart';\n-import 'package:uniccon/utils/colors.dart';\n-import 'package:uniccon/utils/helper_widgets.dart';\n+import 'package:uniccon/utils/utils.dart';\n \n class SignIn extends StatefulWidget {\n   const SignIn({super.key});\n \n"
+                },
+                {
+                    "date": 1686209764217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:uniccon/component/primary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n \n class SignIn extends StatefulWidget {\n@@ -18,8 +19,9 @@\n           child: Column(\n             children: [\n               const Icon(Icons.arrow_back),\n               addVerticalSpace(30),\n+              const PrimaryText(text: 'Create an account')\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686209772444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           child: Column(\n             children: [\n               const Icon(Icons.arrow_back),\n               addVerticalSpace(30),\n-              const PrimaryText(text: 'Create an account')\n+              const PrimaryText(text: 'Create your account')\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686209784276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n           child: Column(\n             children: [\n               const Icon(Icons.arrow_back),\n               addVerticalSpace(30),\n-              const PrimaryText(text: 'Create your account')\n+              const PrimaryText(text: 'Create your account'),\n+              addVerticalSpace(4),\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686209809104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:uniccon/component/primary_text.dart';\n+import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n \n class SignIn extends StatefulWidget {\n@@ -21,8 +22,11 @@\n               const Icon(Icons.arrow_back),\n               addVerticalSpace(30),\n               const PrimaryText(text: 'Create your account'),\n               addVerticalSpace(4),\n+              const SecondaryText(\n+                  text:\n+                      'Let’s start by creating your Akiba account. Already have an account? Log in')\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686210121434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n         backgroundColor: AppColors.background,\n         body: Padding(\n           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n           child: Column(\n+            crossAxisAlignment: CrossAxisAlignment.start,\n             children: [\n               const Icon(Icons.arrow_back),\n               addVerticalSpace(30),\n               const PrimaryText(text: 'Create your account'),\n"
+                },
+                {
+                    "date": 1686210197517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:uniccon/component/custom_textfield.dart';\n import 'package:uniccon/component/primary_text.dart';\n import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n@@ -10,8 +11,9 @@\n   State<SignIn> createState() => _SignInState();\n }\n \n class _SignInState extends State<SignIn> {\n+  TextEditingController firstNameController = TextEditingController();\n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n         backgroundColor: AppColors.background,\n@@ -25,9 +27,11 @@\n               const PrimaryText(text: 'Create your account'),\n               addVerticalSpace(4),\n               const SecondaryText(\n                   text:\n-                      'Let’s start by creating your Akiba account. Already have an account? Log in')\n+                      'Let’s start by creating your Akiba account. Already have an account? Log in'),\n+              addVerticalSpace(40),\n+              CustomTextField(label: 'First name', controller: controller)\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686210202988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,10 @@\n               const SecondaryText(\n                   text:\n                       'Let’s start by creating your Akiba account. Already have an account? Log in'),\n               addVerticalSpace(40),\n-              CustomTextField(label: 'First name', controller: controller)\n+              CustomTextField(\n+                  label: 'First name', controller: firstNameController)\n             ],\n           ),\n         ));\n   }\n"
+                },
+                {
+                    "date": 1686211319765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n-import 'package:uniccon/component/custom_textfield.dart';\n-import 'package:uniccon/component/primary_text.dart';\n-import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/export.dart';\n-import 'package:uniccon/utils/utils.dart';\n \n class SignIn extends StatefulWidget {\n   const SignIn({super.key});\n \n@@ -11,29 +7,9 @@\n   State<SignIn> createState() => _SignInState();\n }\n \n class _SignInState extends State<SignIn> {\n-  TextEditingController firstNameController = TextEditingController();\n   @override\n   Widget build(BuildContext context) {\n-    return Scaffold(\n-        backgroundColor: AppColors.background,\n-        body: Padding(\n-          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 30),\n-          child: Column(\n-            crossAxisAlignment: CrossAxisAlignment.start,\n-            children: [\n-              const Icon(Icons.arrow_back),\n-              addVerticalSpace(30),\n-              const PrimaryText(text: 'Create your account'),\n-              addVerticalSpace(4),\n-              const SecondaryText(\n-                  text:\n-                      'Let’s start by creating your Akiba account. Already have an account? Log in'),\n-              addVerticalSpace(40),\n-              CustomTextField(\n-                  label: 'First name', controller: firstNameController)\n-            ],\n-          ),\n-        ));\n+    return const Placeholder();\n   }\n }\n"
+                },
+                {
+                    "date": 1686227405869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/utils/utils.dart';\n \n class SignIn extends StatefulWidget {\n   const SignIn({super.key});\n \n@@ -9,7 +10,7 @@\n \n class _SignInState extends State<SignIn> {\n   @override\n   Widget build(BuildContext context) {\n-    return const Placeholder();\n+    return Container(color: AppColors.background,);\n   }\n }\n"
+                },
+                {
+                    "date": 1686228111062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,11 @@\n   @override\n   Widget build(BuildContext context) {\n     return Container(\n       color: AppColors.background,\n+      child: SizedBox(\n+                width: 139,\n+                height: 95,\n+                child: Image.asset(\"assets/images/logo.png\")),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686228128426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n   Widget build(BuildContext context) {\n     return Container(\n       color: AppColors.background,\n       child: SizedBox(\n-          width: 139, height: 95, child: Image.asset(\"assets/images/logo.png\")),\n+          width: 139, height: 95, child: Image.asset(\"assets/images/image.png\")),\n     );\n   }\n }\n"
+                }
+            ],
+            "date": 1686204469218,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/src/widgets/framework.dart';\nimport 'package:flutter/src/widgets/placeholder.dart';\n\nclass SignIn extends StatefulWidget {\n  const SignIn({super.key});\n\n  @override\n  State<SignIn> createState() => _SignInState();\n}\n\nclass _SignInState extends State<SignIn> {\n  @override\n  Widget build(BuildContext context) {\n    return const Placeholder();\n  }\n}\n"
+        }
+    ]
+}

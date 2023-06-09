@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/utils/colors.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1686202941742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686206178268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'dart:ui';\n+import 'utils.dart';\n \n class AppColors {\n   // Light Theme\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n"
+                },
+                {
+                    "date": 1686206305848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'utils.dart';\n+import 'dart:ui';\n \n class AppColors {\n   // Light Theme\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n"
+                },
+                {
+                    "date": 1686209328848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import 'dart:ui';\n \n class AppColors {\n   // Light Theme\n+  static const Color background = Color.fromRGBO(255, 255, 255, 1);\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n   static const Color primaryText = Color.fromRGBO(22, 23, 34, 1);\n   static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n   static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n"
+                },
+                {
+                    "date": 1686210283658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n class AppColors {\n   // Light Theme\n   static const Color background = Color.fromRGBO(255, 255, 255, 1);\n+  static const Color border = Color.fromRGBO(71, 55, 103, 1);\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n   static const Color primaryText = Color.fromRGBO(22, 23, 34, 1);\n   static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n   static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n"
+                },
+                {
+                    "date": 1686223294342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n   static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n   static const Color card = Color.fromRGBO(238, 238, 238, 1);\n   static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);\n   static const Color checkBox = Color.fromRGBO(0, 192, 75, 1);\n+  static const Color fillColor = Color.fromRGBO(204, 209, 211, 1);\n }\n"
+                },
+                {
+                    "date": 1686223376931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n   static const Color card = Color.fromRGBO(238, 238, 238, 1);\n   static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);\n   static const Color checkBox = Color.fromRGBO(0, 192, 75, 1);\n-  static const Color fillColor = Color.fromRGBO(204, 209, 211, 1);\n+  static const Color fillColor = Color.fromRGBO(248, 248, 248, 1);\n }\n"
+                },
+                {
+                    "date": 1686223503861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n class AppColors {\n   // Light Theme\n   static const Color background = Color.fromRGBO(255, 255, 255, 1);\n-  static const Color border = Color.fromRGBO(71, 55, 103, 1);\n+  static const Color border = Color.fromRGBO(204, 209, 211, 1);\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n   static const Color primaryText = Color.fromRGBO(22, 23, 34, 1);\n   static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n   static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n"
+                },
+                {
+                    "date": 1686231927065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   // Light Theme\n   static const Color background = Color.fromRGBO(255, 255, 255, 1);\n   static const Color border = Color.fromRGBO(204, 209, 211, 1);\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n-  static const Color primaryText = Color.fromRGBO(22, 23, 34, 1);\n+  static const Color primaryText = Color.fromRGBO(28, 25, 57, 1);\n   static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n   static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n   static const Color card = Color.fromRGBO(238, 238, 238, 1);\n   static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);\n"
+                },
+                {
+                    "date": 1686242604284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   static const Color border = Color.fromRGBO(204, 209, 211, 1);\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n   static const Color primaryText = Color.fromRGBO(28, 25, 57, 1);\n   static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n-  static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n+  static const Color addMoney = Color.fromRGBO(57, 47, 78, 1);\n   static const Color card = Color.fromRGBO(238, 238, 238, 1);\n   static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);\n   static const Color checkBox = Color.fromRGBO(0, 192, 75, 1);\n   static const Color fillColor = Color.fromRGBO(248, 248, 248, 1);\n"
+                },
+                {
+                    "date": 1686243508949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n   static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n   static const Color primaryText = Color.fromRGBO(28, 25, 57, 1);\n   static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n   static const Color addMoney = Color.fromRGBO(57, 47, 78, 1);\n+  static const Color withdraw = Color.fromRGBO(193, 56, 89, 1);\n   static const Color card = Color.fromRGBO(238, 238, 238, 1);\n   static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);\n   static const Color checkBox = Color.fromRGBO(0, 192, 75, 1);\n   static const Color fillColor = Color.fromRGBO(248, 248, 248, 1);\n"
+                }
+            ],
+            "date": 1686202941742,
+            "name": "Commit-0",
+            "content": "import 'dart:ui';\n\nclass AppColors {\n  // Light Theme\n  static const Color primary = Color.fromRGBO(227, 59, 88, 1);\n  static const Color primaryText = Color.fromRGBO(22, 23, 34, 1);\n  static const Color secondaryText = Color.fromRGBO(98, 94, 128, 1);\n  static const Color addMoney = Color.fromRGBO(252, 251, 250, 1);\n  static const Color card = Color.fromRGBO(238, 238, 238, 1);\n  static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);\n  static const Color checkBox = Color.fromRGBO(0, 192, 75, 1);\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/screens/tabs/profile.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1686203333830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686246420653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/src/widgets/framework.dart';\n import 'package:flutter/src/widgets/placeholder.dart';\n+import 'package:uniccon/export.dart';\n \n class Profile extends StatefulWidget {\n   const Profile({super.key});\n \n@@ -10,7 +11,7 @@\n \n class _ProfileState extends State<Profile> {\n   @override\n   Widget build(BuildContext context) {\n-    return const Placeholder();\n+    return Container(color: Colors.amber);\n   }\n }\n"
+                },
+                {
+                    "date": 1686246451468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \n class _ProfileState extends State<Profile> {\n   @override\n   Widget build(BuildContext context) {\n-    return Container(color: Colors.amber);\n+    return Container(color: Colors.purple);\n   }\n }\n"
+                }
+            ],
+            "date": 1686203333830,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/src/widgets/framework.dart';\nimport 'package:flutter/src/widgets/placeholder.dart';\n\nclass Profile extends StatefulWidget {\n  const Profile({super.key});\n\n  @override\n  State<Profile> createState() => _ProfileState();\n}\n\nclass _ProfileState extends State<Profile> {\n  @override\n  Widget build(BuildContext context) {\n    return const Placeholder();\n  }\n}\n"
+        }
+    ]
+}

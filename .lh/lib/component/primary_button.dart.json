@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/component/primary_button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686201562214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686213303174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\n+import 'package:uniccon/utils/colors.dart';\n \n class PrimaryButton extends StatelessWidget {\n   final double? height;\n   final double? width;\n@@ -20,9 +21,9 @@\n   Widget build(BuildContext context) {\n     return ElevatedButton(\n       onPressed: onPressed,\n       style: ElevatedButton.styleFrom(\n-        backgroundColor: color ?? Colors.blue, // Default color is blue\n+        backgroundColor: color ?? AppColors.primary, // Default color is blue\n         shape: RoundedRectangleBorder(\n           borderRadius: BorderRadius.circular(8.0), // Fixed border radius\n         ),\n         minimumSize: Size(width ?? double.infinity, height ?? 50.0),\n"
+                },
+                {
+                    "date": 1686213353450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\n+import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/utils/colors.dart';\n \n class PrimaryButton extends StatelessWidget {\n   final double? height;\n@@ -27,8 +28,9 @@\n           borderRadius: BorderRadius.circular(8.0), // Fixed border radius\n         ),\n         minimumSize: Size(width ?? double.infinity, height ?? 50.0),\n       ),\n-      child: Text(buttonText),\n+      child: SecondaryText(text: buttonText)\n+      // Text(buttonText),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686213364862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             borderRadius: BorderRadius.circular(8.0), // Fixed border radius\n           ),\n           minimumSize: Size(width ?? double.infinity, height ?? 50.0),\n         ),\n-        child: SecondaryText(text: buttonText)\n+        child: SecondaryText(text: buttonText, color: AppColors.background,)\n         // Text(buttonText),\n         );\n   }\n }\n"
+                }
+            ],
+            "date": 1686201562214,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\n\nclass PrimaryButton extends StatelessWidget {\n  final double? height;\n  final double? width;\n  final Color? color;\n  final String buttonText;\n  final VoidCallback onPressed;\n\n  const PrimaryButton({\n    super.key,\n    this.height,\n    this.width,\n    this.color,\n    required this.buttonText,\n    required this.onPressed,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return ElevatedButton(\n      onPressed: onPressed,\n      style: ElevatedButton.styleFrom(\n        backgroundColor: color ?? Colors.blue, // Default color is blue\n        shape: RoundedRectangleBorder(\n          borderRadius: BorderRadius.circular(8.0), // Fixed border radius\n        ),\n        minimumSize: Size(width ?? double.infinity, height ?? 50.0),\n      ),\n      child: Text(buttonText),\n    );\n  }\n}\n"
+        }
+    ]
+}

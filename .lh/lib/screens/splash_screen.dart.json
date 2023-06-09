@@ -1,0 +1,82 @@
+{
+    "sourceFile": "lib/screens/splash_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1686204140175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686204152156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-import 'package:flutter/src/widgets/framework.dart';\n-import 'package:flutter/src/widgets/placeholder.dart';\n+import 'package:uniccon/export.dart';\n \n class Spalsh extends StatelessWidget {\n   const Spalsh({super.key});\n \n"
+                },
+                {
+                    "date": 1686204169466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:uniccon/export.dart';\n \n-class Spalsh extends StatelessWidget {\n-  const Spalsh({super.key});\n+class SplashScreen extends StatelessWidget {\n+  const SplashScreen({super.key});\n \n   @override\n   Widget build(BuildContext context) {\n     return const Placeholder();\n"
+                },
+                {
+                    "date": 1686206424008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,78 @@\n+import 'dart:async';\n+\n+import 'package:uniccon/component/primary_text.dart';\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/utils/colors.dart';\n+import 'package:uniccon/utils/helper_widgets.dart';\n \n-class SplashScreen extends StatelessWidget {\n-  const SplashScreen({super.key});\n+class SplashScreen extends StatefulWidget {\n+  const SplashScreen({Key? key}) : super(key: key);\n \n   @override\n+  State<SplashScreen> createState() => _SplashScreenState();\n+}\n+\n+class _SplashScreenState extends State<SplashScreen> {\n+  // @override\n+  // void initState() {\n+  //   Timer(const Duration(seconds: 3), () => SignInPage());\n+  //   super.initState();\n+  // }\n+\n+  @override\n   Widget build(BuildContext context) {\n-    return const Placeholder();\n+    return Scaffold(\n+      backgroundColor: AppColors.primary,\n+      body: InkWell(\n+        onTap: () => Navigator.pushNamed(context, RouteName.onboarding_page),\n+        child: SafeArea(\n+            child: Container(\n+          color: AppColors.primary,\n+          child: Center(\n+            child: SizedBox(\n+              child: Column(\n+                mainAxisAlignment: MainAxisAlignment.center,\n+                crossAxisAlignment: CrossAxisAlignment.start,\n+                children: [\n+                  SizedBox(\n+                      width: 356,\n+                      height: 236,\n+                      child: Image.asset(\"assets/dove_splash.png\")),\n+                  addVerticalSpace(40),\n+                  const SizedBox(\n+                      width: 372,\n+                      height: 100,\n+                      child: PrimaryText(\n+                        text: \"DAILY FELLOWSHIP REMINDER\",\n+                        color: Colors.white,\n+                      )),\n+                  addVerticalSpace(40),\n+                  Center(\n+                    child: AnimatedTextKit(\n+                      totalRepeatCount: 40,\n+                      animatedTexts: [\n+                        ScaleAnimatedText(\n+                          'Tap the Screen Proceed',\n+                          duration: const Duration(milliseconds: 2000),\n+                          textStyle: const TextStyle(\n+                              color: MyColors.backgroundColor, fontSize: 20.0),\n+                        ),\n+                      ],\n+                    ),\n+                  ),\n+                ],\n+              ),\n+            ),\n+          ),\n+        )),\n+      ),\n+    );\n   }\n+\n+  // void getAuthStatus() async {\n+  //   final authStatus = await LocalStoreHelper.isAuth();\n+  //   setState(() {\n+  //     _authStatus = authStatus;\n+  //   });\n+  // }\n }\n"
+                },
+                {
+                    "date": 1686206455848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import 'dart:async';\n-\n import 'package:uniccon/component/primary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/colors.dart';\n import 'package:uniccon/utils/helper_widgets.dart';\n@@ -46,21 +44,21 @@\n                         text: \"DAILY FELLOWSHIP REMINDER\",\n                         color: Colors.white,\n                       )),\n                   addVerticalSpace(40),\n-                  Center(\n-                    child: AnimatedTextKit(\n-                      totalRepeatCount: 40,\n-                      animatedTexts: [\n-                        ScaleAnimatedText(\n-                          'Tap the Screen Proceed',\n-                          duration: const Duration(milliseconds: 2000),\n-                          textStyle: const TextStyle(\n-                              color: MyColors.backgroundColor, fontSize: 20.0),\n-                        ),\n-                      ],\n-                    ),\n-                  ),\n+                  // Center(\n+                  //   child: AnimatedTextKit(\n+                  //     totalRepeatCount: 40,\n+                  //     animatedTexts: [\n+                  //       ScaleAnimatedText(\n+                  //         'Tap the Screen Proceed',\n+                  //         duration: const Duration(milliseconds: 2000),\n+                  //         textStyle: const TextStyle(\n+                  //             color: MyColors.backgroundColor, fontSize: 20.0),\n+                  //       ),\n+                  //     ],\n+                  //   ),\n+                  // ),\n                 ],\n               ),\n             ),\n           ),\n"
+                },
+                {
+                    "date": 1686206487156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                 children: [\n                   SizedBox(\n                       width: 356,\n                       height: 236,\n-                      child: Image.asset(\"assets/dove_splash.png\")),\n+                      child: Image.asset(\"assets/images/logo.png\")),\n                   addVerticalSpace(40),\n                   const SizedBox(\n                       width: 372,\n                       height: 100,\n"
+                },
+                {
+                    "date": 1686206498032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   Widget build(BuildContext context) {\n     return Scaffold(\n       backgroundColor: AppColors.primary,\n       body: InkWell(\n-        onTap: () => Navigator.pushNamed(context, RouteName.onboarding_page),\n+        onTap: () => Navigator.pushNamed(context, RouteName.root),\n         child: SafeArea(\n             child: Container(\n           color: AppColors.primary,\n           child: Center(\n"
+                },
+                {
+                    "date": 1686206598046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n-import 'package:uniccon/component/primary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/colors.dart';\n-import 'package:uniccon/utils/helper_widgets.dart';\n \n class SplashScreen extends StatefulWidget {\n   const SplashScreen({Key? key}) : super(key: key);\n \n@@ -27,40 +25,12 @@\n             child: Container(\n           color: AppColors.primary,\n           child: Center(\n             child: SizedBox(\n-              child: Column(\n-                mainAxisAlignment: MainAxisAlignment.center,\n-                crossAxisAlignment: CrossAxisAlignment.start,\n-                children: [\n-                  SizedBox(\n-                      width: 356,\n-                      height: 236,\n-                      child: Image.asset(\"assets/images/logo.png\")),\n-                  addVerticalSpace(40),\n-                  const SizedBox(\n-                      width: 372,\n-                      height: 100,\n-                      child: PrimaryText(\n-                        text: \"DAILY FELLOWSHIP REMINDER\",\n-                        color: Colors.white,\n-                      )),\n-                  addVerticalSpace(40),\n-                  // Center(\n-                  //   child: AnimatedTextKit(\n-                  //     totalRepeatCount: 40,\n-                  //     animatedTexts: [\n-                  //       ScaleAnimatedText(\n-                  //         'Tap the Screen Proceed',\n-                  //         duration: const Duration(milliseconds: 2000),\n-                  //         textStyle: const TextStyle(\n-                  //             color: MyColors.backgroundColor, fontSize: 20.0),\n-                  //       ),\n-                  //     ],\n-                  //   ),\n-                  // ),\n-                ],\n-              ),\n+              child: SizedBox(\n+                  width: 356,\n+                  height: 236,\n+                  child: Image.asset(\"assets/images/logo.png\")),\n             ),\n           ),\n         )),\n       ),\n"
+                },
+                {
+                    "date": 1686207298116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n           color: AppColors.primary,\n           child: Center(\n             child: SizedBox(\n               child: SizedBox(\n-                  width: 356,\n-                  height: 236,\n+                  width: 139,\n+                  height: 95,\n                   child: Image.asset(\"assets/images/logo.png\")),\n             ),\n           ),\n         )),\n"
+                },
+                {
+                    "date": 1686207434806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'dart:async';\n+\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/colors.dart';\n \n class SplashScreen extends StatefulWidget {\n@@ -8,13 +10,13 @@\n   State<SplashScreen> createState() => _SplashScreenState();\n }\n \n class _SplashScreenState extends State<SplashScreen> {\n-  // @override\n-  // void initState() {\n-  //   Timer(const Duration(seconds: 3), () => SignInPage());\n-  //   super.initState();\n-  // }\n+  @override\n+  void initState() {\n+    Timer(const Duration(seconds: 3), () => const SignIn());\n+    super.initState();\n+  }\n \n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n"
+                },
+                {
+                    "date": 1686207591236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   Widget build(BuildContext context) {\n     return Scaffold(\n       backgroundColor: AppColors.primary,\n       body: InkWell(\n-        onTap: () => Navigator.pushNamed(context, RouteName.root),\n+        onTap: () => Navigator.pushNamed(context, RouteName.signIn),\n         child: SafeArea(\n             child: Container(\n           color: AppColors.primary,\n           child: Center(\n"
+                },
+                {
+                    "date": 1686207857337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import 'dart:async';\n-\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/colors.dart';\n \n class SplashScreen extends StatefulWidget {\n@@ -10,13 +8,13 @@\n   State<SplashScreen> createState() => _SplashScreenState();\n }\n \n class _SplashScreenState extends State<SplashScreen> {\n-  @override\n-  void initState() {\n-    Timer(const Duration(seconds: 3), () => const SignIn());\n-    super.initState();\n-  }\n+  // @override\n+  // void initState() {\n+  //   Timer(const Duration(seconds: 3), () => const SignIn());\n+  //   super.initState();\n+  // }\n \n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n"
+                },
+                {
+                    "date": 1686208531235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'dart:async';\n+\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/colors.dart';\n \n class SplashScreen extends StatefulWidget {\n@@ -8,13 +10,13 @@\n   State<SplashScreen> createState() => _SplashScreenState();\n }\n \n class _SplashScreenState extends State<SplashScreen> {\n-  // @override\n-  // void initState() {\n-  //   Timer(const Duration(seconds: 3), () => const SignIn());\n-  //   super.initState();\n-  // }\n+  @override\n+  void initState() {\n+    Timer(const Duration(seconds: 3), () => const SignIn());\n+    super.initState();\n+  }\n \n   @override\n   Widget build(BuildContext context) {\n     return Scaffold(\n"
+                },
+                {
+                    "date": 1686208558071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,10 @@\n \n class _SplashScreenState extends State<SplashScreen> {\n   @override\n   void initState() {\n-    Timer(const Duration(seconds: 3), () => const SignIn());\n+    Timer(const Duration(seconds: 3),\n+        () => Navigator.pushNamed(context, RouteName.signIn));\n     super.initState();\n   }\n \n   @override\n"
+                },
+                {
+                    "date": 1686211433214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n class _SplashScreenState extends State<SplashScreen> {\n   @override\n   void initState() {\n     Timer(const Duration(seconds: 3),\n-        () => Navigator.pushNamed(context, RouteName.signIn));\n+        () => Navigator.pushNamed(context, RouteName.signUp));\n     super.initState();\n   }\n \n   @override\n"
+                },
+                {
+                    "date": 1686211438796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   Widget build(BuildContext context) {\n     return Scaffold(\n       backgroundColor: AppColors.primary,\n       body: InkWell(\n-        onTap: () => Navigator.pushNamed(context, RouteName.signIn),\n+        onTap: () => Navigator.pushNamed(context, RouteName.signUp),\n         child: SafeArea(\n             child: Container(\n           color: AppColors.primary,\n           child: Center(\n"
+                },
+                {
+                    "date": 1686223628599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,11 @@\n             child: Container(\n           color: AppColors.primary,\n           child: Center(\n             child: SizedBox(\n-              child: SizedBox(\n-                  width: 139,\n-                  height: 95,\n-                  child: Image.asset(\"assets/images/logo.png\")),\n-            ),\n+                width: 139,\n+                height: 95,\n+                child: Image.asset(\"assets/images/logo.png\")),\n           ),\n         )),\n       ),\n     );\n"
+                }
+            ],
+            "date": 1686204140175,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/src/widgets/framework.dart';\nimport 'package:flutter/src/widgets/placeholder.dart';\n\nclass Spalsh extends StatelessWidget {\n  const Spalsh({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return const Placeholder();\n  }\n}\n"
+        }
+    ]
+}

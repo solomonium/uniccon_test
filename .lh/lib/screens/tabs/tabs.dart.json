@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/screens/tabs/tabs.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1686203413972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1686203413972,
+            "name": "Commit-0",
+            "content": "export 'package:uniccon/screens/tabs/home.dart';\nexport 'package:uniccon/screens/tabs/loans.dart';\nexport 'package:uniccon/screens/tabs/profile.dart';\nexport 'package:uniccon/screens/tabs/savings.dart';\nexport 'package:uniccon/screens/tabs/tribe.dart';\n"
+        }
+    ]
+}

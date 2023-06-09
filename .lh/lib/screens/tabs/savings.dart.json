@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screens/tabs/savings.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686203239723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686246317875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import 'package:flutter/src/widgets/framework.dart';\n import 'package:flutter/src/widgets/placeholder.dart';\n \n+import '../../export.dart';\n+\n class Savings extends StatefulWidget {\n   const Savings({super.key});\n \n   @override\n@@ -10,7 +12,7 @@\n \n class _SavingsState extends State<Savings> {\n   @override\n   Widget build(BuildContext context) {\n-    return const Placeholder();\n+    return Container(color: Colors.amber);\n   }\n }\n"
+                },
+                {
+                    "date": 1686246380234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \n class _SavingsState extends State<Savings> {\n   @override\n   Widget build(BuildContext context) {\n-    return Container(color: Colors.amber);\n+    return Container(color: Colors.red);\n   }\n }\n"
+                },
+                {
+                    "date": 1686246388269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \n class _SavingsState extends State<Savings> {\n   @override\n   Widget build(BuildContext context) {\n-    return Container(color: Colors.red);\n+    return Container(color: Colors.green);\n   }\n }\n"
+                }
+            ],
+            "date": 1686203239723,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/src/widgets/framework.dart';\nimport 'package:flutter/src/widgets/placeholder.dart';\n\nclass Savings extends StatefulWidget {\n  const Savings({super.key});\n\n  @override\n  State<Savings> createState() => _SavingsState();\n}\n\nclass _SavingsState extends State<Savings> {\n  @override\n  Widget build(BuildContext context) {\n    return const Placeholder();\n  }\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/component/primary_text.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686199752273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686203808164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\n+import 'package:uniccon/utils/colors.dart';\n \n class PrimaryText extends StatelessWidget {\n   final Color? color;\n   final String title;\n@@ -18,11 +19,11 @@\n   Widget build(BuildContext context) {\n     return Text(\n       title,\n       style: TextStyle(\n-        color: color ?? Colors.black,\n+        color: color ?? AppColors.primaryText,\n         fontSize: fontSize ?? 24.0,\n-        fontWeight: fontWeight ?? FontWeight.normal,\n+        fontWeight: fontWeight ?? FontWeight.w500,\n       ),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686203827214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,24 +2,24 @@\n import 'package:uniccon/utils/colors.dart';\n \n class PrimaryText extends StatelessWidget {\n   final Color? color;\n-  final String title;\n+  final String text;\n   final double? fontSize;\n   final FontWeight? fontWeight;\n \n   const PrimaryText({\n     super.key,\n     this.color,\n-    required this.title,\n+    required this.text,\n     this.fontSize,\n     this.fontWeight,\n   });\n \n   @override\n   Widget build(BuildContext context) {\n     return Text(\n-      title,\n+      text,\n       style: TextStyle(\n         color: color ?? AppColors.primaryText,\n         fontSize: fontSize ?? 24.0,\n         fontWeight: fontWeight ?? FontWeight.w500,\n"
+                },
+                {
+                    "date": 1686209923162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n   Widget build(BuildContext context) {\n     return Text(\n       text,\n       style: TextStyle(\n-        color: color ?? AppColors.primaryText,\n-        fontSize: fontSize ?? 24.0,\n-        fontWeight: fontWeight ?? FontWeight.w500,\n-      ),\n+          color: color ?? AppColors.primaryText,\n+          fontSize: fontSize ?? 24.0,\n+          fontWeight: fontWeight ?? FontWeight.w500,\n+          fontFamily: 'Coinbase Sans'),\n     );\n   }\n }\n"
+                }
+            ],
+            "date": 1686199752273,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\n\nclass PrimaryText extends StatelessWidget {\n  final Color? color;\n  final String title;\n  final double? fontSize;\n  final FontWeight? fontWeight;\n\n  const PrimaryText({\n    super.key,\n    this.color,\n    required this.title,\n    this.fontSize,\n    this.fontWeight,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return Text(\n      title,\n      style: TextStyle(\n        color: color ?? Colors.black,\n        fontSize: fontSize ?? 24.0,\n        fontWeight: fontWeight ?? FontWeight.normal,\n      ),\n    );\n  }\n}\n"
+        }
+    ]
+}

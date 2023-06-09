@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screens/routes/route_names.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686204053214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686204716108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n class RouteName {\n   static const String root = '/';\n   static const String signInPage = 'sign_in_page';\n   static const String onboardingPage = 'onboarding_page';\n+  static const String onboardingPage = 'onboarding_page';\n+  static const String onboardingPage = 'onboarding_page';\n+  static const String onboardingPage = 'onboarding_page';\n+  static const String onboardingPage = 'onboarding_page';\n }\n"
+                },
+                {
+                    "date": 1686204874470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n class RouteName {\n   static const String root = '/';\n-  static const String signInPage = 'sign_in_page';\n-  static const String onboardingPage = 'onboarding_page';\n-  static const String onboardingPage = 'onboarding_page';\n-  static const String onboardingPage = 'onboarding_page';\n-  static const String onboardingPage = 'onboarding_page';\n-  static const String onboardingPage = 'onboarding_page';\n+  static const String signIn = 'sign_in_page';\n+  static const String signUp = 'sign_up';\n+  static const String acctSuccess = 'acct_success';\n+  static const String password = 'password';\n+  static const String dashboard = 'dashboard';\n }\n"
+                },
+                {
+                    "date": 1686207977594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class RouteName {\n   static const String root = '/';\n-  static const String signIn = 'sign_in_page';\n+  static const String signIn = 'sign_in';\n   static const String signUp = 'sign_up';\n   static const String acctSuccess = 'acct_success';\n   static const String password = 'password';\n   static const String dashboard = 'dashboard';\n"
+                }
+            ],
+            "date": 1686204053214,
+            "name": "Commit-0",
+            "content": "class RouteName {\n  static const String root = '/';\n  static const String signInPage = 'sign_in_page';\n  static const String onboardingPage = 'onboarding_page';\n}\n"
+        }
+    ]
+}

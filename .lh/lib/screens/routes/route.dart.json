@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screens/routes/route.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686205078486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686205164508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,6 @@\n export 'package:uniccon/screens/views/acct_success.dart';\n export 'package:uniccon/screens/views/password_set.dart';\n export 'package:uniccon/screens/views/sign_in.dart';\n export 'package:uniccon/screens/views/sign_up.dart';\n+\n+export 'route_names.dart';\n"
+                },
+                {
+                    "date": 1686232346216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n export 'package:uniccon/screens/nav_bar.dart';\n export 'package:uniccon/screens/splash_screen.dart';\n-export 'package:uniccon/screens/views/acct_success.dart';\n-export 'package:uniccon/screens/views/password_set.dart';\n-export 'package:uniccon/screens/views/sign_in.dart';\n-export 'package:uniccon/screens/views/sign_up.dart';\n+export 'package:uniccon/screens/auth_views/acct_success.dart';\n+export 'package:uniccon/screens/auth_views/sign_in.dart';\n+export 'package:uniccon/screens/auth_views/sign_up.dart';\n \n export 'route_names.dart';\n"
+                },
+                {
+                    "date": 1686232523032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,8 @@\n export 'package:uniccon/screens/auth_views/sign_in.dart';\n export 'package:uniccon/screens/auth_views/sign_up.dart';\n export 'package:uniccon/screens/nav_bar.dart';\n export 'package:uniccon/screens/splash_screen.dart';\n+export 'package:uniccon/screens/auth_views/password_set.dart';\n \n+\n export 'route_names.dart';\n"
+                }
+            ],
+            "date": 1686205078486,
+            "name": "Commit-0",
+            "content": "export 'package:uniccon/screens/nav_bar.dart';\nexport 'package:uniccon/screens/splash_screen.dart';\nexport 'package:uniccon/screens/views/acct_success.dart';\nexport 'package:uniccon/screens/views/password_set.dart';\nexport 'package:uniccon/screens/views/sign_in.dart';\nexport 'package:uniccon/screens/views/sign_up.dart';\n"
+        }
+    ]
+}

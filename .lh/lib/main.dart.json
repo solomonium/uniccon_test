@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686205972564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686205985118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n       theme: ThemeData(\n         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),\n         useMaterial3: true,\n       ),\n-      home: const Dashboard(),\n+      home: const SplashScreen(),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686208491566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/screens/routes/router.dart';\n \n void main() {\n   runApp(const MyApp());\n }\n@@ -15,8 +16,9 @@\n       theme: ThemeData(\n         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),\n         useMaterial3: true,\n       ),\n+      onGenerateRoute: Router.generateRoute,\n       home: const SplashScreen(),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686228057178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),\n         useMaterial3: true,\n       ),\n       onGenerateRoute: Router.generateRoute,\n-      home: const SplashScreen(),\n+      // home: const SplashScreen(),\n     );\n   }\n }\n"
+                }
+            ],
+            "date": 1686205972564,
+            "name": "Commit-0",
+            "content": "import 'package:uniccon/export.dart';\n\nvoid main() {\n  runApp(const MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  const MyApp({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      debugShowCheckedModeBanner: false,\n      title: 'Flutter Demo',\n      theme: ThemeData(\n        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),\n        useMaterial3: true,\n      ),\n      home: const Dashboard(),\n    );\n  }\n}\n"
+        }
+    ]
+}

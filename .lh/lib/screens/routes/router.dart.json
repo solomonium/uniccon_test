@@ -1,0 +1,62 @@
+{
+    "sourceFile": "lib/screens/routes/router.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1686204100805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686204194633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/screens/splash_screen.dart';\n \n import 'route_names.dart';\n \n class Router {\n@@ -8,9 +9,9 @@\n       case '/':\n         return MaterialPageRoute(builder: (_) => const SplashScreen());\n       case RouteName.signInPage:\n         return MaterialPageRoute(builder: (_) => const SignInPage());\n-      case RouteName.onboarding_page:\n+      case RouteName.onboardingPage:\n         return MaterialPageRoute(builder: (_) => const OnboardingScreens());\n       default:\n         return MaterialPageRoute(builder: (_) => const SignInPage());\n     }\n"
+                },
+                {
+                    "date": 1686204716110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,32 @@\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/screens/nav_bar.dart';\n import 'package:uniccon/screens/splash_screen.dart';\n+import 'package:uniccon/screens/views/acct_success.dart';\n+import 'package:uniccon/screens/views/password_set.dart';\n+import 'package:uniccon/screens/views/sign_in.dart';\n+import 'package:uniccon/screens/views/sign_up.dart';\n \n import 'route_names.dart';\n \n class Router {\n   static Route<dynamic> generateRoute(RouteSettings settings) {\n     switch (settings.name) {\n       case '/':\n         return MaterialPageRoute(builder: (_) => const SplashScreen());\n-      case RouteName.signInPage:\n-        return MaterialPageRoute(builder: (_) => const SignInPage());\n+      case RouteName.signIn:\n+        return MaterialPageRoute(builder: (_) => const SignIn());\n+      case RouteName.signUp:\n+        return MaterialPageRoute(builder: (_) => const SignUp());\n       case RouteName.onboardingPage:\n-        return MaterialPageRoute(builder: (_) => const OnboardingScreens());\n+        return MaterialPageRoute(builder: (_) => const PasswordSet());\n+      case RouteName.acctSuccess:\n+        return MaterialPageRoute(builder: (_) => const AcctSuccess());\n+      case RouteName.password:\n+        return MaterialPageRoute(builder: (_) => const PasswordSet());\n+      case RouteName.dashboard:\n+        return MaterialPageRoute(builder: (_) => const Dashboard());\n       default:\n-        return MaterialPageRoute(builder: (_) => const SignInPage());\n+        return MaterialPageRoute(builder: (_) => const SignIn());\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1686204799364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n import 'package:uniccon/export.dart';\n-import 'package:uniccon/screens/nav_bar.dart';\n import 'package:uniccon/screens/splash_screen.dart';\n-import 'package:uniccon/screens/views/acct_success.dart';\n-import 'package:uniccon/screens/views/password_set.dart';\n import 'package:uniccon/screens/views/sign_in.dart';\n import 'package:uniccon/screens/views/sign_up.dart';\n \n import 'route_names.dart';\n@@ -16,16 +13,9 @@\n       case RouteName.signIn:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n       case RouteName.signUp:\n         return MaterialPageRoute(builder: (_) => const SignUp());\n-      case RouteName.onboardingPage:\n-        return MaterialPageRoute(builder: (_) => const PasswordSet());\n-      case RouteName.acctSuccess:\n-        return MaterialPageRoute(builder: (_) => const AcctSuccess());\n-      case RouteName.password:\n-        return MaterialPageRoute(builder: (_) => const PasswordSet());\n-      case RouteName.dashboard:\n-        return MaterialPageRoute(builder: (_) => const Dashboard());\n+\n       default:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n     }\n   }\n"
+                },
+                {
+                    "date": 1686204907528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,14 @@\n \n class Router {\n   static Route<dynamic> generateRoute(RouteSettings settings) {\n     switch (settings.name) {\n-      case '/':\n+      case RouteName.root:\n         return MaterialPageRoute(builder: (_) => const SplashScreen());\n       case RouteName.signIn:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n       case RouteName.signUp:\n         return MaterialPageRoute(builder: (_) => const SignUp());\n-\n       default:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n     }\n   }\n"
+                },
+                {
+                    "date": 1686204962245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import 'package:uniccon/export.dart';\n import 'package:uniccon/screens/splash_screen.dart';\n+import 'package:uniccon/screens/views/acct_success.dart';\n+import 'package:uniccon/screens/views/password_set.dart';\n import 'package:uniccon/screens/views/sign_in.dart';\n import 'package:uniccon/screens/views/sign_up.dart';\n \n import 'route_names.dart';\n@@ -13,8 +15,12 @@\n       case RouteName.signIn:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n       case RouteName.signUp:\n         return MaterialPageRoute(builder: (_) => const SignUp());\n+      case RouteName.acctSuccess:\n+        return MaterialPageRoute(builder: (_) => const AcctSuccess());\n+      case RouteName.password:\n+        return MaterialPageRoute(builder: (_) => const PasswordSet());\n       default:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n     }\n   }\n"
+                },
+                {
+                    "date": 1686205019541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:uniccon/export.dart';\n+import 'package:uniccon/screens/nav_bar.dart';\n import 'package:uniccon/screens/splash_screen.dart';\n import 'package:uniccon/screens/views/acct_success.dart';\n import 'package:uniccon/screens/views/password_set.dart';\n import 'package:uniccon/screens/views/sign_in.dart';\n@@ -19,8 +20,10 @@\n       case RouteName.acctSuccess:\n         return MaterialPageRoute(builder: (_) => const AcctSuccess());\n       case RouteName.password:\n         return MaterialPageRoute(builder: (_) => const PasswordSet());\n+      case RouteName.dashboard:\n+        return MaterialPageRoute(builder: (_) => const Dashboard());\n       default:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n     }\n   }\n"
+                },
+                {
+                    "date": 1686205089825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,6 @@\n import 'package:uniccon/export.dart';\n-import 'package:uniccon/screens/nav_bar.dart';\n-import 'package:uniccon/screens/splash_screen.dart';\n-import 'package:uniccon/screens/views/acct_success.dart';\n-import 'package:uniccon/screens/views/password_set.dart';\n-import 'package:uniccon/screens/views/sign_in.dart';\n-import 'package:uniccon/screens/views/sign_up.dart';\n+import 'package:uniccon/screens/routes/route.dart';\n \n import 'route_names.dart';\n \n class Router {\n"
+                },
+                {
+                    "date": 1686205138876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:uniccon/export.dart';\n-import 'package:uniccon/screens/routes/route.dart';\n \n import 'route_names.dart';\n \n class Router {\n"
+                },
+                {
+                    "date": 1686205172043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n import 'package:uniccon/export.dart';\n \n-import 'route_names.dart';\n-\n class Router {\n   static Route<dynamic> generateRoute(RouteSettings settings) {\n     switch (settings.name) {\n       case RouteName.root:\n"
+                },
+                {
+                    "date": 1686208006071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   static Route<dynamic> generateRoute(RouteSettings settings) {\n     switch (settings.name) {\n       case RouteName.root:\n         return MaterialPageRoute(builder: (_) => const SplashScreen());\n-      case RouteName.signIn:\n+      case 'sign_in':\n         return MaterialPageRoute(builder: (_) => const SignIn());\n       case RouteName.signUp:\n         return MaterialPageRoute(builder: (_) => const SignUp());\n       case RouteName.acctSuccess:\n"
+                },
+                {
+                    "date": 1686208072338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   static Route<dynamic> generateRoute(RouteSettings settings) {\n     switch (settings.name) {\n       case RouteName.root:\n         return MaterialPageRoute(builder: (_) => const SplashScreen());\n-      case 'sign_in':\n+      case RouteName.signIn:\n         return MaterialPageRoute(builder: (_) => const SignIn());\n       case RouteName.signUp:\n         return MaterialPageRoute(builder: (_) => const SignUp());\n       case RouteName.acctSuccess:\n"
+                }
+            ],
+            "date": 1686204100805,
+            "name": "Commit-0",
+            "content": "import 'package:uniccon/export.dart';\n\nimport 'route_names.dart';\n\nclass Router {\n  static Route<dynamic> generateRoute(RouteSettings settings) {\n    switch (settings.name) {\n      case '/':\n        return MaterialPageRoute(builder: (_) => const SplashScreen());\n      case RouteName.signInPage:\n        return MaterialPageRoute(builder: (_) => const SignInPage());\n      case RouteName.onboarding_page:\n        return MaterialPageRoute(builder: (_) => const OnboardingScreens());\n      default:\n        return MaterialPageRoute(builder: (_) => const SignInPage());\n    }\n  }\n}\n"
+        }
+    ]
+}

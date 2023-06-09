@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/component/custom_container.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1686203502705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686210957084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,29 @@\n-import 'package:uniccon/export.dart';\n+// import 'package:uniccon/export.dart';\n \n-class CustomContainer extends StatelessWidget {\n-  final double height;\n-  final double width;\n-  final Color? color;\n-  final double? borderRadius;\n+// class CustomContainer extends StatelessWidget {\n+//   final double height;\n+//   final double width;\n+//   final Color? color;\n+//   final double? borderRadius;\n \n-  const CustomContainer({\n-    super.key,\n-    required this.height,\n-    required this.width,\n-    this.color,\n-    this.borderRadius,\n-  });\n+//   const CustomContainer({\n+//     super.key,\n+//     required this.height,\n+//     required this.width,\n+//     this.color,\n+//     this.borderRadius,\n+//   });\n \n-  @override\n-  Widget build(BuildContext context) {\n-    return Container(\n-      height: height,\n-      width: width,\n-      decoration: BoxDecoration(\n-        color: color,\n-        borderRadius:\n-            borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n-      ),\n-    );\n-  }\n-}\n+//   @override\n+//   Widget build(BuildContext context) {\n+//     return Container(\n+//       height: height,\n+//       width: width,\n+//       decoration: BoxDecoration(\n+//         color: color,\n+//         borderRadius:\n+//             borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n+//       ),\n+//     );\n+//   }\n+// }\n"
+                },
+                {
+                    "date": 1686211186143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,29 @@\n-// import 'package:uniccon/export.dart';\n+import 'package:uniccon/export.dart';\n \n-// class CustomContainer extends StatelessWidget {\n-//   final double height;\n-//   final double width;\n-//   final Color? color;\n-//   final double? borderRadius;\n+class CustomContainer extends StatelessWidget {\n+  final double height;\n+  final double width;\n+  final Color? color;\n+  final double? borderRadius;\n \n-//   const CustomContainer({\n-//     super.key,\n-//     required this.height,\n-//     required this.width,\n-//     this.color,\n-//     this.borderRadius,\n-//   });\n+  const CustomContainer({\n+    super.key,\n+    required this.height,\n+    required this.width,\n+    this.color,\n+    this.borderRadius,\n+  });\n \n-//   @override\n-//   Widget build(BuildContext context) {\n-//     return Container(\n-//       height: height,\n-//       width: width,\n-//       decoration: BoxDecoration(\n-//         color: color,\n-//         borderRadius:\n-//             borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n-//       ),\n-//     );\n-//   }\n-// }\n+  @override\n+  Widget build(BuildContext context) {\n+    return Container(\n+      height: height,\n+      width: width,\n+      decoration: BoxDecoration(\n+        color: color,\n+        borderRadius:\n+            borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n+      ),\n+    );\n+  }\n+}\n"
+                },
+                {
+                    "date": 1686233195874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,17 @@\n   final double height;\n   final double width;\n   final Color? color;\n   final double? borderRadius;\n+  final Widget? child;\n \n   const CustomContainer({\n     super.key,\n     required this.height,\n     required this.width,\n     this.color,\n     this.borderRadius,\n+    this.child,\n   });\n \n   @override\n   Widget build(BuildContext context) {\n"
+                },
+                {
+                    "date": 1686233209053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n       decoration: BoxDecoration(\n         color: color,\n         borderRadius:\n             borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n-      ),\n+      ),child: child,\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686236725980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n         color: color,\n         borderRadius:\n             borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n       ),\n-      child: child,\n+      child: Center(child: child),\n     );\n   }\n }\n"
+                }
+            ],
+            "date": 1686203502705,
+            "name": "Commit-0",
+            "content": "import 'package:uniccon/export.dart';\n\nclass CustomContainer extends StatelessWidget {\n  final double height;\n  final double width;\n  final Color? color;\n  final double? borderRadius;\n\n  const CustomContainer({\n    super.key,\n    required this.height,\n    required this.width,\n    this.color,\n    this.borderRadius,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      height: height,\n      width: width,\n      decoration: BoxDecoration(\n        color: color,\n        borderRadius:\n            borderRadius != null ? BorderRadius.circular(borderRadius!) : null,\n      ),\n    );\n  }\n}\n"
+        }
+    ]
+}

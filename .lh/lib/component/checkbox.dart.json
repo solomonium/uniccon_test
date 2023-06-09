@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/component/checkbox.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1686224761813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686224949929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n           widget.onChange(_isSelected);\n         });\n       },\n       child: Row(\n+        mainAxisAlignment: MainAxisAlignment.start,\n         children: [\n           AnimatedContainer(\n             duration: const Duration(microseconds: 500),\n             decoration: BoxDecoration(\n"
+                },
+                {
+                    "date": 1686224959333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,9 @@\n         });\n       },\n       child: Row(\n         mainAxisAlignment: MainAxisAlignment.start,\n+        crossAxisAlignment: CrossAxisAlignment.start,\n         children: [\n           AnimatedContainer(\n             duration: const Duration(microseconds: 500),\n             decoration: BoxDecoration(\n"
+                },
+                {
+                    "date": 1686225010587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,38 +42,41 @@\n           _isSelected = !_isSelected;\n           widget.onChange(_isSelected);\n         });\n       },\n-      child: Row(\n-        mainAxisAlignment: MainAxisAlignment.start,\n-        crossAxisAlignment: CrossAxisAlignment.start,\n-        children: [\n-          AnimatedContainer(\n-            duration: const Duration(microseconds: 500),\n-            decoration: BoxDecoration(\n-                color: _isSelected ? widget.selectedColor : Colors.transparent,\n-                borderRadius: BorderRadius.circular(5.0),\n-                border: _isSelected\n-                    ? null\n-                    : Border.all(color: AppColors.checkBox, width: 2.0)),\n-            width: widget.size,\n-            height: widget.size,\n-            child: _isSelected\n-                ? const Icon(\n-                    Icons.check_sharp,\n-                    color: Colors.white,\n-                    size: 14,\n-                  )\n-                : null,\n-          ),\n-          addHorizontalSpace(8),\n-          SizedBox(\n-            width: widget.width,\n-            child: SecondaryText(\n-              text: widget.text,\n+      child: SizedBox(\n+        height: 38,\n+        child: Row(\n+          mainAxisAlignment: MainAxisAlignment.start,\n+          crossAxisAlignment: CrossAxisAlignment.start,\n+          children: [\n+            AnimatedContainer(\n+              duration: const Duration(microseconds: 500),\n+              decoration: BoxDecoration(\n+                  color: _isSelected ? widget.selectedColor : Colors.transparent,\n+                  borderRadius: BorderRadius.circular(5.0),\n+                  border: _isSelected\n+                      ? null\n+                      : Border.all(color: AppColors.checkBox, width: 2.0)),\n+              width: widget.size,\n+              height: widget.size,\n+              child: _isSelected\n+                  ? const Icon(\n+                      Icons.check_sharp,\n+                      color: Colors.white,\n+                      size: 14,\n+                    )\n+                  : null,\n             ),\n-          ),\n-        ],\n+            addHorizontalSpace(8),\n+            SizedBox(\n+              width: widget.width,\n+              child: SecondaryText(\n+                text: widget.text,\n+              ),\n+            ),\n+          ],\n+        ),\n       ),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686225025649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,9 @@\n             SizedBox(\n               width: widget.width,\n               child: SecondaryText(\n                 text: widget.text,\n+                fontSize: 13,\n               ),\n             ),\n           ],\n         ),\n"
+                },
+                {
+                    "date": 1686225048939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                       size: 14,\n                     )\n                   : null,\n             ),\n-            addHorizontalSpace(8),\n+            addHorizontalSpace(15),\n             SizedBox(\n               width: widget.width,\n               child: SecondaryText(\n                 text: widget.text,\n"
+                },
+                {
+                    "date": 1686225149878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n               height: widget.size,\n               child: _isSelected\n                   ? const Icon(\n                       Icons.check_sharp,\n-                      color: Colors.white,\n+                      color: AppColors.checkBox,\n                       size: 14,\n                     )\n                   : null,\n             ),\n"
+                },
+                {
+                    "date": 1686225159690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n               height: widget.size,\n               child: _isSelected\n                   ? const Icon(\n                       Icons.check_sharp,\n-                      color: AppColors.checkBox,\n+                      color: Colors.white,\n                       size: 14,\n                     )\n                   : null,\n             ),\n"
+                },
+                {
+                    "date": 1686225280094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n           widget.onChange(_isSelected);\n         });\n       },\n       child: SizedBox(\n-        height: 38,\n+        // height: 38,\n         child: Row(\n           mainAxisAlignment: MainAxisAlignment.start,\n           crossAxisAlignment: CrossAxisAlignment.start,\n           children: [\n"
+                },
+                {
+                    "date": 1686225290301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,10 @@\n           children: [\n             AnimatedContainer(\n               duration: const Duration(microseconds: 500),\n               decoration: BoxDecoration(\n-                  color: _isSelected ? widget.selectedColor : Colors.transparent,\n+                  color:\n+                      _isSelected ? widget.selectedColor : Colors.transparent,\n                   borderRadius: BorderRadius.circular(5.0),\n                   border: _isSelected\n                       ? null\n                       : Border.all(color: AppColors.checkBox, width: 2.0)),\n"
+                },
+                {
+                    "date": 1686225314092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n                       _isSelected ? widget.selectedColor : Colors.transparent,\n                   borderRadius: BorderRadius.circular(5.0),\n                   border: _isSelected\n                       ? null\n-                      : Border.all(color: AppColors.checkBox, width: 2.0)),\n+                      : Border.all(color: AppColors.checkBox, width: 1.0)),\n               width: widget.size,\n               height: widget.size,\n               child: _isSelected\n                   ? const Icon(\n"
+                }
+            ],
+            "date": 1686224761813,
+            "name": "Commit-0",
+            "content": "import 'package:uniccon/export.dart';\nimport 'package:uniccon/utils/utils.dart';\n\nclass UniCheckBox extends StatefulWidget {\n  final bool isChecked;\n  final double size;\n  final double iconSize;\n  final double width;\n  final Color selectedColor;\n  final Function onChange;\n  final String text;\n\n  const UniCheckBox(\n      {Key? key,\n      required this.isChecked,\n      required this.size,\n      required this.iconSize,\n      required this.selectedColor,\n      this.width = 290,\n      required this.onChange,\n      required this.text})\n      : super(key: key);\n\n  @override\n  State<UniCheckBox> createState() => _UniCheckBoxState();\n}\n\nclass _UniCheckBoxState extends State<UniCheckBox> {\n  bool _isSelected = false;\n\n  @override\n  void initState() {\n    _isSelected = widget.isChecked;\n    super.initState();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return GestureDetector(\n      onTap: () {\n        setState(() {\n          _isSelected = !_isSelected;\n          widget.onChange(_isSelected);\n        });\n      },\n      child: Row(\n        children: [\n          AnimatedContainer(\n            duration: const Duration(microseconds: 500),\n            decoration: BoxDecoration(\n                color: _isSelected ? widget.selectedColor : Colors.transparent,\n                borderRadius: BorderRadius.circular(5.0),\n                border: _isSelected\n                    ? null\n                    : Border.all(color: AppColors.checkBox, width: 2.0)),\n            width: widget.size,\n            height: widget.size,\n            child: _isSelected\n                ? const Icon(\n                    Icons.check_sharp,\n                    color: Colors.white,\n                    size: 14,\n                  )\n                : null,\n          ),\n          addHorizontalSpace(8),\n          SizedBox(\n            width: widget.width,\n            child: SecondaryText(\n              text: widget.text,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n"
+        }
+    ]
+}

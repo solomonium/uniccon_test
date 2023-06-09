@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screens/tabs/tribe.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686203308641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686246338578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/src/widgets/framework.dart';\n import 'package:flutter/src/widgets/placeholder.dart';\n+import 'package:uniccon/export.dart';\n \n class Tribe extends StatefulWidget {\n   const Tribe({super.key});\n \n@@ -10,7 +11,7 @@\n \n class _TribeState extends State<Tribe> {\n   @override\n   Widget build(BuildContext context) {\n-    return const Placeholder();\n+    return Container(color: Colors.amber);\n   }\n }\n"
+                },
+                {
+                    "date": 1686246352524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \n class _TribeState extends State<Tribe> {\n   @override\n   Widget build(BuildContext context) {\n-    return Container(color: Colors.amber);\n+    return Container(color: Colors.amberAccent);\n   }\n }\n"
+                },
+                {
+                    "date": 1686246363504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \n class _TribeState extends State<Tribe> {\n   @override\n   Widget build(BuildContext context) {\n-    return Container(color: Colors.amberAccent);\n+    return Container(color: Colors.blue);\n   }\n }\n"
+                }
+            ],
+            "date": 1686203308641,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/src/widgets/framework.dart';\nimport 'package:flutter/src/widgets/placeholder.dart';\n\nclass Tribe extends StatefulWidget {\n  const Tribe({super.key});\n\n  @override\n  State<Tribe> createState() => _TribeState();\n}\n\nclass _TribeState extends State<Tribe> {\n  @override\n  Widget build(BuildContext context) {\n    return const Placeholder();\n  }\n}\n"
+        }
+    ]
+}

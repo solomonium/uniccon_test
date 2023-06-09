@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/component/bp_inputfield_widget.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1686210893788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686210911095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n \n-class InputFieldWidget extends StatelessWidget {\n+class CustomTextField extends StatelessWidget {\n   Icon? icon;\n   final TextInputType textInputType;\n   final String labelText;\n   final TextEditingController textController;\n@@ -13,9 +13,9 @@\n   String? hintText;\n   final TextInputAction textInputAction;\n   //TODO BorderError, Validation\n \n-  InputFieldWidget(\n+  CustomTextField(\n       {Key? key,\n       this.icon,\n       this.isPassword = false,\n       required this.textInputType,\n"
+                },
+                {
+                    "date": 1686210938362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,20 +2,19 @@\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n \n class CustomTextField extends StatelessWidget {\n-  Icon? icon;\n+  final Icon? icon;\n   final TextInputType textInputType;\n   final String labelText;\n   final TextEditingController textController;\n   final bool autoFocus;\n   final String? Function(String?)? validate;\n-  bool isPassword;\n-  String? hintText;\n+  final bool isPassword;\n+  final String? hintText;\n   final TextInputAction textInputAction;\n-  //TODO BorderError, Validation\n \n-  CustomTextField(\n+  const CustomTextField(\n       {Key? key,\n       this.icon,\n       this.isPassword = false,\n       required this.textInputType,\n"
+                }
+            ],
+            "date": 1686210893788,
+            "name": "Commit-0",
+            "content": "import 'package:uniccon/component/secondary_text.dart';\nimport 'package:uniccon/export.dart';\nimport 'package:uniccon/utils/utils.dart';\n\nclass InputFieldWidget extends StatelessWidget {\n  Icon? icon;\n  final TextInputType textInputType;\n  final String labelText;\n  final TextEditingController textController;\n  final bool autoFocus;\n  final String? Function(String?)? validate;\n  bool isPassword;\n  String? hintText;\n  final TextInputAction textInputAction;\n  //TODO BorderError, Validation\n\n  InputFieldWidget(\n      {Key? key,\n      this.icon,\n      this.isPassword = false,\n      required this.textInputType,\n      required this.labelText,\n      required this.textController,\n      required this.autoFocus,\n      this.validate,\n      this.hintText,\n      required this.textInputAction})\n      : super(key: key);\n\n  @override\n  Widget build(BuildContext context) {\n    return SizedBox(\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          SecondaryText(\n            text: labelText,\n          ),\n          addVerticalSpace(12),\n          SizedBox(\n            height: 52,\n            child: TextFormField(\n              controller: textController,\n              validator: validate,\n              textInputAction: textInputAction,\n              keyboardType: textInputType,\n              obscureText: isPassword == true ? true : false,\n              decoration: InputDecoration(\n                focusedBorder: OutlineInputBorder(\n                    borderSide:\n                        const BorderSide(color: AppColors.primary, width: 0.9),\n                    borderRadius: BorderRadius.circular(12)),\n                enabledBorder: OutlineInputBorder(\n                    borderSide:\n                        const BorderSide(color: AppColors.border, width: 0.9),\n                    borderRadius: BorderRadius.circular(12)),\n                filled: true,\n                hintText: hintText,\n                // hintStyle: GoogleFonts.nunitoSans(\n                //   fontWeight: FontWeight.w400,\n                //   fontSize: 16.0,\n                //   height: 1,\n                //   color: AppColors.secondaryText,\n                // ),\n                fillColor: Colors.white.withOpacity(0.0),\n                suffixIcon: isPassword\n                    ? const Padding(\n                        padding: EdgeInsets.only(\n                            top: 10, left: 0, right: 17, bottom: 10),\n                        child: Icon(Icons.remove_red_eye))\n                    : const Icon(Icons.key),\n              ),\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n"
+        }
+    ]
+}

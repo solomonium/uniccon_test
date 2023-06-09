@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/main_dev.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1686205870355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1686205870355,
+            "name": "Commit-0",
+            "content": "\n// import 'package:uniccon/export.dart';\n\n// void main() {\n//   runApp(\n//     // MultiProvider(\n//     //   providers: globalProviders,\n//     //   child: SpiritualGuide(),\n//     // ),\n//   );\n// }\n\n// class SpiritualGuide extends StatefulWidget {\n//   const SpiritualGuide({Key? key}) : super(key: key);\n\n//   @override\n//   State<SpiritualGuide> createState() => _SpiritualGuideState();\n// }\n\n// class _SpiritualGuideState extends State<SpiritualGuide> {\n//   @override\n//   Widget build(BuildContext context) {\n//     // var themeType = context.select<AppProvider, ThemeType>((val) => val.theme);\n\n//     // AppTheme theme = AppTheme.fromType(themeType);\n//     return Provider.value(\n//       value: theme,\n//       child: MaterialApp(\n//         navigatorKey: R.N.navKey,\n//         title: 'Daily Spiritual Guide',\n//         theme: theme.themeData,\n//         debugShowCheckedModeBanner: false,\n//         home: const OnboardingScreens(),\n//         onGenerateRoute: Router.generateRoute,\n//         builder: (context, child) => MediaQuery(\n//           data: context.widthPx < 600\n//               ? context.mq.copyWith(textScaleFactor: .8)\n//               : context.mq.copyWith(textScaleFactor: 1),\n//           child: InAppNotification(\n//             key: R.N.notifyKey,\n//             safeAreaPadding: EdgeInsets.zero,\n//             minAlertHeight: 40.0,\n//             child: child,\n//           ),\n//         ),\n//       ),\n//     );\n//   }\n// }\n"
+        }
+    ]
+}

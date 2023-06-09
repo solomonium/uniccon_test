@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/component/bp_checkbox.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1686224624628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686224643745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   final double iconSize;\n   final double width;\n   final Color selectedColor;\n   final Function onChange;\n-  final String cardText;\n+  final String text;\n \n   const BpCheckBox(\n       {Key? key,\n       required this.isChecked,\n@@ -18,9 +18,9 @@\n       required this.iconSize,\n       required this.selectedColor,\n       this.width = 290,\n       required this.onChange,\n-      required this.cardText})\n+      required this.text})\n       : super(key: key);\n \n   @override\n   State<BpCheckBox> createState() => _BpCheckBoxState();\n@@ -67,9 +67,9 @@\n           addHorizontalSpace(8),\n           SizedBox(\n             width: widget.width,\n             child: SecondaryText(\n-              text: widget.cardText,\n+              text: widget.text,\n             ),\n           ),\n         ],\n       ),\n"
+                },
+                {
+                    "date": 1686224678583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n                 color: _isSelected ? widget.selectedColor : Colors.transparent,\n                 borderRadius: BorderRadius.circular(5.0),\n                 border: _isSelected\n                     ? null\n-                    : Border.all(color: Colors.grey, width: 2.0)),\n+                    : Border.all(color: AppColors.checkBox, width: 2.0)),\n             width: widget.size,\n             height: widget.size,\n             child: _isSelected\n                 ? const Icon(\n"
+                },
+                {
+                    "date": 1686224713798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n \n-class BpCheckBox extends StatefulWidget {\n+class UniCheckBox extends StatefulWidget {\n   final bool isChecked;\n   final double size;\n   final double iconSize;\n   final double width;\n   final Color selectedColor;\n   final Function onChange;\n   final String text;\n \n-  const BpCheckBox(\n+  const UniCheckBox(\n       {Key? key,\n       required this.isChecked,\n       required this.size,\n       required this.iconSize,\n@@ -22,12 +22,12 @@\n       required this.text})\n       : super(key: key);\n \n   @override\n-  State<BpCheckBox> createState() => _BpCheckBoxState();\n+  State<UniCheckBox> createState() => _UniCheckBoxState();\n }\n \n-class _BpCheckBoxState extends State<BpCheckBox> {\n+class _UniCheckBoxState extends State<UniCheckBox> {\n   bool _isSelected = false;\n \n   @override\n   void initState() {\n"
+                },
+                {
+                    "date": 1686224728468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\n import 'package:uniccon/component/secondary_text.dart';\n import 'package:uniccon/export.dart';\n import 'package:uniccon/utils/utils.dart';\n \n"
+                }
+            ],
+            "date": 1686224624628,
+            "name": "Commit-0",
+            "content": "\nimport 'package:uniccon/component/secondary_text.dart';\nimport 'package:uniccon/export.dart';\nimport 'package:uniccon/utils/utils.dart';\n\nclass BpCheckBox extends StatefulWidget {\n  final bool isChecked;\n  final double size;\n  final double iconSize;\n  final double width;\n  final Color selectedColor;\n  final Function onChange;\n  final String cardText;\n\n  const BpCheckBox(\n      {Key? key,\n      required this.isChecked,\n      required this.size,\n      required this.iconSize,\n      required this.selectedColor,\n      this.width = 290,\n      required this.onChange,\n      required this.cardText})\n      : super(key: key);\n\n  @override\n  State<BpCheckBox> createState() => _BpCheckBoxState();\n}\n\nclass _BpCheckBoxState extends State<BpCheckBox> {\n  bool _isSelected = false;\n\n  @override\n  void initState() {\n    _isSelected = widget.isChecked;\n    super.initState();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return GestureDetector(\n      onTap: () {\n        setState(() {\n          _isSelected = !_isSelected;\n          widget.onChange(_isSelected);\n        });\n      },\n      child: Row(\n        children: [\n          AnimatedContainer(\n            duration: const Duration(microseconds: 500),\n            decoration: BoxDecoration(\n                color: _isSelected ? widget.selectedColor : Colors.transparent,\n                borderRadius: BorderRadius.circular(5.0),\n                border: _isSelected\n                    ? null\n                    : Border.all(color: Colors.grey, width: 2.0)),\n            width: widget.size,\n            height: widget.size,\n            child: _isSelected\n                ? const Icon(\n                    Icons.check_sharp,\n                    color: Colors.white,\n                    size: 14,\n                  )\n                : null,\n          ),\n          addHorizontalSpace(8),\n          SizedBox(\n            width: widget.width,\n            child: SecondaryText(\n              text: widget.cardText,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n"
+        }
+    ]
+}
