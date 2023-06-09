@@ -1,4 +1,3 @@
-import 'package:uniccon/component/secondary_text.dart';
 import 'package:uniccon/export.dart';
 import 'package:uniccon/utils/utils.dart';
 
