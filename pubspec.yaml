@@ -50,6 +50,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/font/
 
   fonts:
     - family: SuomiSans

@@ -13,4 +13,5 @@ class AppColors {
   static const Color acctSetUp = Color.fromRGBO(71, 56, 103, 0.8);
   static const Color checkBox = Color.fromRGBO(0, 192, 75, 1);
   static const Color fillColor = Color.fromRGBO(248, 248, 248, 1);
+  static const Color welcomeText = Color.fromRGBO(193, 251, 88, 1);
 }

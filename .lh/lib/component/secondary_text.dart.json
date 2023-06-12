@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1686203645503,
@@ -32,6 +32,18 @@
                 {
                     "date": 1686209989724,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n       style: TextStyle(\n           color: color ?? AppColors.secondaryText,\n           fontSize: fontSize ?? 16.0,\n           fontWeight: fontWeight ?? FontWeight.w400,\n-          fontFamily: 'SuomiSans'),\n+          fontFamily: 'Coinbase Sans'),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686529173630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,17 @@\n   final Color? color;\n   final String text;\n   final double? fontSize;\n   final FontWeight? fontWeight;\n+  final TextAlign? textAlign;\n \n   const SecondaryText({\n     super.key,\n     this.color,\n     required this.text,\n     this.fontSize,\n     this.fontWeight,\n+    this.textAlign,\n   });\n \n   @override\n   Widget build(BuildContext context) {\n@@ -22,8 +24,8 @@\n       style: TextStyle(\n           color: color ?? AppColors.secondaryText,\n           fontSize: fontSize ?? 16.0,\n           fontWeight: fontWeight ?? FontWeight.w400,\n-          fontFamily: 'Coinbase Sans'),\n+          fontFamily: 'Coinbase Sans'), textAlign: textAlign ?? TextAlign.start,\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686530962289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n       style: TextStyle(\n           color: color ?? AppColors.secondaryText,\n           fontSize: fontSize ?? 16.0,\n           fontWeight: fontWeight ?? FontWeight.w400,\n-          fontFamily: 'Coinbase Sans'),\n+          fontFamily: 'Nunito Sans'),\n       textAlign: textAlign ?? TextAlign.start,\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686531409670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n       style: TextStyle(\n           color: color ?? AppColors.secondaryText,\n           fontSize: fontSize ?? 16.0,\n           fontWeight: fontWeight ?? FontWeight.w400,\n-          fontFamily: 'Nunito Sans'),\n+          fontFamily: 'NunitoSans'),\n       textAlign: textAlign ?? TextAlign.start,\n     );\n   }\n }\n"
                 }
             ],
             "date": 1686203645503,

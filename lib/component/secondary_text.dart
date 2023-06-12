@@ -6,6 +6,7 @@ class SecondaryText extends StatelessWidget {
   final String text;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final TextAlign? textAlign;
 
   const SecondaryText({
     super.key,
@@ -13,6 +14,7 @@ class SecondaryText extends StatelessWidget {
     required this.text,
     this.fontSize,
     this.fontWeight,
+    this.textAlign,
   });
 
   @override
@@ -23,7 +25,8 @@ class SecondaryText extends StatelessWidget {
           color: color ?? AppColors.secondaryText,
           fontSize: fontSize ?? 16.0,
           fontWeight: fontWeight ?? FontWeight.w400,
-          fontFamily: 'Coinbase Sans'),
+          fontFamily: 'NunitoSans'),
+      textAlign: textAlign ?? TextAlign.start,
     );
   }
 }

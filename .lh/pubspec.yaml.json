@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1686201034195,
@@ -20,6 +20,42 @@
                 {
                     "date": 1686207230100,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,18 +53,13 @@\n   fonts:\n     - family: SuomiSans\n       fonts:\n         - asset: assets/fonts/SuomiSansBold.otf\n-          weight: 600\n+          weight: 500\n         - asset: assets/fonts/SuomiSansBoldItalic.otf\n           weight: 500\n-\n-        - asset: assets/fonts/SuomiSansHeavyItalic.otf\n-          weight: 600\n         - asset: assets/fonts/SuomiSansLight.otf\n           weight: 500\n         - asset: assets/fonts/SuomiSansMedium.otf\n           weight: 400\n-        - asset: assets/fonts/SuomiSansRegular.otf\n+        - asset: assets/fonts/SuomiSansThin.otf\n           weight: 300\n-        - asset: assets/fonts/SuomiSansSemibold.otf\n-          weight: 200\n"
+                },
+                {
+                    "date": 1686531350487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,16 +51,16 @@\n     - assets/icons/\n     - assets/images/\n \n   fonts:\n-    - family: SuomiSans\n+    - family: NunitoSans\n       fonts:\n-        - asset: assets/fonts/SuomiSansBold.otf\n+        - asset: assets/fonts/ NunitoSans-Bold.ttf\n           weight: 500\n-        - asset: assets/fonts/SuomiSansBoldItalic.otf\n+        - asset: assets/fonts/ NunitoSans-Black.ttf\n           weight: 500\n-        - asset: assets/fonts/SuomiSansLight.otf\n+        - asset: assets/fonts/ NunitoSans-Light.ttf\n           weight: 500\n-        - asset: assets/fonts/SuomiSansMedium.otf\n+        - asset: assets/fonts/ NunitoSans-Regular.ttf\n           weight: 400\n-        - asset: assets/fonts/SuomiSansThin.otf\n+        - asset: assets/fonts/ NunitoSans-SemiBold.ttf\n           weight: 300\n"
+                },
+                {
+                    "date": 1686531367290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,9 @@\n \n   assets:\n     - assets/icons/\n     - assets/images/\n+    - assets/font/\n \n   fonts:\n     - family: NunitoSans\n       fonts:\n"
+                },
+                {
+                    "date": 1686531554288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,14 +54,14 @@\n \n   fonts:\n     - family: NunitoSans\n       fonts:\n-        - asset: assets/fonts/ NunitoSans-Bold.ttf\n+        - asset: assets/font/NunitoSans-Bold.ttf\n           weight: 500\n-        - asset: assets/fonts/ NunitoSans-Black.ttf\n+        - asset: assets/font/NunitoSans-Black.ttf\n           weight: 500\n-        - asset: assets/fonts/ NunitoSans-Light.ttf\n+        - asset: assets/font/NunitoSans-Light.ttf\n           weight: 500\n-        - asset: assets/fonts/ NunitoSans-Regular.ttf\n+        - asset: assets/font/NunitoSans-Regular.ttf\n           weight: 400\n-        - asset: assets/fonts/ NunitoSans-SemiBold.ttf\n+        - asset: assets/font/NunitoSans-SemiBold.ttf\n           weight: 300\n"
+                },
+                {
+                    "date": 1686531740160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,14 +54,14 @@\n \n   fonts:\n     - family: NunitoSans\n       fonts:\n-        - asset: assets/font/NunitoSans-Bold.ttf\n+        - asset: assets/fonts/NunitoSans-Bold.ttf\n           weight: 500\n-        - asset: assets/font/NunitoSans-Black.ttf\n+        - asset: assets/fonts/NunitoSans-Black.ttf\n           weight: 500\n-        - asset: assets/font/NunitoSans-Light.ttf\n+        - asset: assets/fonts/NunitoSans-Light.ttf\n           weight: 500\n-        - asset: assets/font/NunitoSans-Regular.ttf\n+        - asset: assets/fonts/NunitoSans-Regular.ttf\n           weight: 400\n-        - asset: assets/font/NunitoSans-SemiBold.ttf\n+        - asset: assets/fonts/NunitoSans-SemiBold.ttf\n           weight: 300\n"
+                },
+                {
+                    "date": 1686531802021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,16 +52,16 @@\n     - assets/images/\n     - assets/font/\n \n   fonts:\n-    - family: NunitoSans\n+    - family: SuomiSans\n       fonts:\n-        - asset: assets/fonts/NunitoSans-Bold.ttf\n+        - asset: assets/fonts/SuomiSans-Bold.ttf\n           weight: 500\n-        - asset: assets/fonts/NunitoSans-Black.ttf\n+        - asset: assets/fonts/SuomiSans-Black.ttf\n           weight: 500\n-        - asset: assets/fonts/NunitoSans-Light.ttf\n+        - asset: assets/fonts/SuomiSans-Light.ttf\n           weight: 500\n-        - asset: assets/fonts/NunitoSans-Regular.ttf\n+        - asset: assets/fonts/SuomiSans-Regular.ttf\n           weight: 400\n-        - asset: assets/fonts/NunitoSans-SemiBold.ttf\n+        - asset: assets/fonts/SuomiSans-SemiBold.ttf\n           weight: 300\n"
+                },
+                {
+                    "date": 1686531834802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,14 +54,14 @@\n \n   fonts:\n     - family: SuomiSans\n       fonts:\n-        - asset: assets/fonts/SuomiSans-Bold.ttf\n+        - asset: assets/fonts/SuomiSans-Bold.otf\n           weight: 500\n-        - asset: assets/fonts/SuomiSans-Black.ttf\n+        - asset: assets/fonts/SuomiSans-Black.otf\n           weight: 500\n-        - asset: assets/fonts/SuomiSans-Light.ttf\n+        - asset: assets/fonts/SuomiSans-Light.otf\n           weight: 500\n-        - asset: assets/fonts/SuomiSans-Regular.ttf\n+        - asset: assets/fonts/SuomiSans-Regular.otf\n           weight: 400\n-        - asset: assets/fonts/SuomiSans-SemiBold.ttf\n+        - asset: assets/fonts/SuomiSans-SemiBold.otf\n           weight: 300\n"
+                },
+                {
+                    "date": 1686531892938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,11 +54,11 @@\n \n   fonts:\n     - family: SuomiSans\n       fonts:\n-        - asset: assets/fonts/SuomiSans-Bold.otf\n+        - asset: assets/fonts/SuomiSansBold.otf\n           weight: 500\n-        - asset: assets/fonts/SuomiSans-Black.otf\n+        - asset: assets/fonts/SuomiSansBoldItalic.otf\n           weight: 500\n         - asset: assets/fonts/SuomiSans-Light.otf\n           weight: 500\n         - asset: assets/fonts/SuomiSans-Regular.otf\n"
+                },
+                {
+                    "date": 1686531905207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,10 @@\n         - asset: assets/fonts/SuomiSansBold.otf\n           weight: 500\n         - asset: assets/fonts/SuomiSansBoldItalic.otf\n           weight: 500\n-        - asset: assets/fonts/SuomiSans-Light.otf\n+        - asset: assets/fonts/SuomiSansLight.otf\n           weight: 500\n-        - asset: assets/fonts/SuomiSans-Regular.otf\n+        - asset: assets/fonts/SuomiSansMedium.otf\n           weight: 400\n         - asset: assets/fonts/SuomiSans-SemiBold.otf\n           weight: 300\n"
+                },
+                {
+                    "date": 1686531911978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,6 +62,6 @@\n         - asset: assets/fonts/SuomiSansLight.otf\n           weight: 500\n         - asset: assets/fonts/SuomiSansMedium.otf\n           weight: 400\n-        - asset: assets/fonts/SuomiSans-SemiBold.otf\n+        - asset: assets/fonts/SuomiSansThin.otf\n           weight: 300\n"
                 }
             ],
             "date": 1686201034195,

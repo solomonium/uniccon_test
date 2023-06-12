@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1686199752273,
@@ -20,6 +20,14 @@
                 {
                     "date": 1686209923162,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n   Widget build(BuildContext context) {\n     return Text(\n       text,\n       style: TextStyle(\n-        color: color ?? AppColors.primaryText,\n-        fontSize: fontSize ?? 24.0,\n-        fontWeight: fontWeight ?? FontWeight.w500,\n-      ),\n+          color: color ?? AppColors.primaryText,\n+          fontSize: fontSize ?? 24.0,\n+          fontWeight: fontWeight ?? FontWeight.w500,\n+          fontFamily: 'Coinbase Sans'),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686530976793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n       style: TextStyle(\n           color: color ?? AppColors.primaryText,\n           fontSize: fontSize ?? 24.0,\n           fontWeight: fontWeight ?? FontWeight.w500,\n-          fontFamily: 'Coinbase Sans'),\n+          fontFamily: 'Nunito Sans'),\n     );\n   }\n }\n"
+                },
+                {
+                    "date": 1686531397995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n       style: TextStyle(\n           color: color ?? AppColors.primaryText,\n           fontSize: fontSize ?? 24.0,\n           fontWeight: fontWeight ?? FontWeight.w500,\n-          fontFamily: 'Nunito Sans'),\n+          fontFamily: 'NunitoSans'),\n     );\n   }\n }\n"
                 }
             ],
             "date": 1686199752273,

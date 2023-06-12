@@ -23,7 +23,7 @@ class PrimaryText extends StatelessWidget {
           color: color ?? AppColors.primaryText,
           fontSize: fontSize ?? 24.0,
           fontWeight: fontWeight ?? FontWeight.w500,
-          fontFamily: 'Coinbase Sans'),
+          fontFamily: 'NunitoSans'),
     );
   }
 }
